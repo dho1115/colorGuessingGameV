@@ -1,7 +1,5 @@
 const arrayOfColors = ["red", "green", "yellow", "burlywood", "brown", "FireBrick", "GreenYellow", "MediumOrchid", "grey"];
 
-const arrayOfColorsSorted = arrayOfColors.sort();
-
 const container = document.querySelector(".container");
 const getH3 = document.querySelectorAll(".color h3");
 const getDiv = document.querySelectorAll(".color");
@@ -58,6 +56,7 @@ if (titlePage.textContent == 'THE GUESSING GAME') {
 }
 
 if (titlePage.textContent = "Sorted Colors") {
+    const arrayOfColorsSorted = arrayOfColors.sort();
     arrayOfColorsSorted.forEach((val, ind, arr) => {
         sortedContainerH3[ind].textContent = val;
         sortedContainerDiv[ind].style.background = val;
