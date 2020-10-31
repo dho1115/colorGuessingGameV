@@ -33,16 +33,16 @@ if (titlePage.textContent == 'THE GUESSING GAME') {
             guessCount += 1;
             guesses.textContent = guessCount;
     
-            if (this.innerText > correctColor) {
+            if (this.innerText.trim() > correctColor) {
                 this.innerText = "Your guess is alphabetically GREATER than the correct color.";
-            } else if (this.innerText < correctColor) {
+            } else if (this.innerText.trim() < correctColor) {
                 this.innerText = "Your guess is alphabetically LESS than the correct color.";
             } else {
                 this.innerHTML = "<h1>" + "CORRECT!!!" + "</h1>";
                 arrayOfColors.forEach((val, ind, arr) => {
                     getDiv[ind].style.pointerEvents = "none";
     
-                    if (getDiv[ind].innerText != "CORRECT!!!") {
+                    if (getDiv[ind].innerText.trim() != "CORRECT!!!") {
                         getDiv[ind].style.opacity = 0;
                     } else {
                         getDiv[ind].style.width = "190px";
@@ -55,7 +55,7 @@ if (titlePage.textContent == 'THE GUESSING GAME') {
     });
 }
 
-if (titlePage.textContent = "Sorted Colors") {
+if (titlePage.textContent == "Sorted Colors") {
     const arrayOfColorsSorted = arrayOfColors.sort();
     arrayOfColorsSorted.forEach((val, ind, arr) => {
         sortedContainerH3[ind].textContent = val;
